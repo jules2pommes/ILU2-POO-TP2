@@ -18,19 +18,12 @@ public class BoundaryAfficherMarche {
 		} else {
 			System.out.println(nomAcheteur + ", vous trouverez au marché :");
 			StringBuilder s = new StringBuilder();
-			for (int i = 0; i < infosMarche.length/3; i++) {
-				s.append(" - ");
-				s.append(infosMarche[i]);
-				i++;
-				s.append(" qui vend ");
-				s.append(infosMarche[i]);
-				i++;
-				s.append(" ");
-				s.append(infosMarche[i]);
-				i++;
-				s.append("\n");
+			
+			int end = infosMarche.length; // sonarQube veut une borne invariante
+			for (int i = 0; i < end; i = i+3) {
+				s.append(" - %s qui vend %d %s%n".formatted(infosMarche[i], infosMarche[i+1], infosMarche[i+2]));
 			}
-			System.out.println(s.toString());
+			System.out.print(s.toString());
 		}
 	}
 }
