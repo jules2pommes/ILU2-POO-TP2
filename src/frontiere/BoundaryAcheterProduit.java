@@ -50,7 +50,7 @@ public class BoundaryAcheterProduit {
 		} else if (quantiteAchetee == 0) {
 			System.out.println("%s veut acheter %d fleurs, malheureusement il n’y en a plus !".formatted(nomAcheteur, quantite));
 		} else {
-			System.out.print("%s veut acheter %d fleurs, malheureusement %s n’en a plus que %d.".formatted(nomAcheteur, quantite, nomVendeur, quantiteAchetee));
+			System.out.print("%s veut acheter %d fleurs, malheureusement %s n’en a plus que %d. ".formatted(nomAcheteur, quantite, nomVendeur, quantiteAchetee));
 			System.out.println("%s achète tout le stock de %s.".formatted(nomAcheteur, nomVendeur));
 		}
 	}
