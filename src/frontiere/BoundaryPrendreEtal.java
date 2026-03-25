@@ -11,7 +11,9 @@ public class BoundaryPrendreEtal {
 
 	public void prendreEtal(String nomVendeur) {
 		if (!controlPrendreEtal.verifierIdentite(nomVendeur)) {
-			System.out.println(String.format("Je suis désolé %s, mais il faut un habitant de notre village pour commercer ici", nomVendeur));
+			System.out.println(String.format("Je suis désolé %s, mais il faut un habitant de notre village pour commercer ici.", nomVendeur));
+		} else if (controlPrendreEtal.estVendeur(nomVendeur)) {
+			System.out.println(String.format("Vous possedez déjà un étal."));
 		} else {
 			System.out.println(String.format("Bonjour %s, je vais regarder si je peux vous trouver un étal.", nomVendeur));
 			if (!controlPrendreEtal.resteEtals()) 

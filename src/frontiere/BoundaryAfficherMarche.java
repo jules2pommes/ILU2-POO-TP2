@@ -21,7 +21,7 @@ public class BoundaryAfficherMarche {
 			
 			int end = infosMarche.length; // sonarQube veut une borne invariante
 			for (int i = 0; i < end; i = i+3) {
-				s.append(" - %s qui vend %d %s%n".formatted(infosMarche[i], infosMarche[i+1], infosMarche[i+2]));
+				s.append(" - %s qui vend %s %s%n".formatted(infosMarche[i], infosMarche[i+1], infosMarche[i+2]));
 			}
 			System.out.print(s.toString());
 		}

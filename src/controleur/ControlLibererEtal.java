@@ -26,8 +26,10 @@ public class ControlLibererEtal {
 	 */
 	public String[] libererEtal(String nomVendeur) {
 		Etal e = controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur);
-		// TODO faut effectivement liberer l'étal
-		return e.etatEtal();
+		String[] infos = e.etatEtal();
+		// TODO faut effectivement liberer l'étal, ou village.partirVendeur(G)
+		e.libererEtal();
+		return infos;
 	}
 
 }
