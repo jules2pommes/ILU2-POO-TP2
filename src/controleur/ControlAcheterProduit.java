@@ -35,7 +35,11 @@ public class ControlAcheterProduit {
 	}
 	
 	public int acheterProduit(String nomVendeur, int quantite) {
-		Etal etal = village.rechercherEtal(village.trouverHabitant(nomVendeur));
-		return etal.acheterProduit(quantite);
+		Gaulois g = village.trouverHabitant(nomVendeur);
+		if (g != null) {
+			Etal etal = village.rechercherEtal(g);
+			return etal.acheterProduit(quantite);
+		}
+		return -1;
 	}
 }
